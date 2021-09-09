@@ -5,5 +5,5 @@ branches:
 projects:
   CommandsExploder:
     path: ""
-    icon: "Icons.png"
+    icon: "icon.png"
 ...
