@@ -1,0 +1,8 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/MulqiGaming64/CommandsExploder
+build-by-default: true
+branches:
+- main
+projects:
+  CommandsExploder:
+    path: ""
+...
