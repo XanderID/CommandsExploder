@@ -5,13 +5,8 @@ namespace MulqiGaming64\CommandsExploder;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\Player;
-use pocketmine\Server;
-
 use pocketmine\event\server\CommandEvent;
-
 use pocketmine\command\ConsoleCommandSender;
-use pocketmine\command\Command;
-use pocketmine\command\CommandSender;
 
 class CommandsExploder extends PluginBase implements Listener {
 	
