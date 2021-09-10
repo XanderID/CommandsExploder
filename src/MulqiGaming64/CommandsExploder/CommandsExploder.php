@@ -7,7 +7,7 @@ use pocketmine\event\Listener;
 use pocketmine\Player;
 use pocketmine\Server;
 
-use pocketmine\event\server\ServerCommandEvent;
+use pocketmine\event\server\CommandEvent;
 
 use pocketmine\command\ConsoleCommandSender;
 use pocketmine\command\Command;
@@ -19,7 +19,7 @@ class CommandsExploder extends PluginBase implements Listener {
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 	}
 	
-	public function onExecuteCommand(ServerCommandEvent $ev){
+	public function onExecuteCommand(CommandEvent $ev){
 		$command = $ev->getCommand();
 		$exp = explode(" && ", $command);
 		$sender = $ev->getSender();
