@@ -2,19 +2,21 @@
 
 namespace MulqiGaming64\CommandsExploder;
 
+use pocketmine\player\Player;
 use pocketmine\plugin\PluginBase;
+
 use pocketmine\event\Listener;
-use pocketmine\Player;
 use pocketmine\event\server\CommandEvent;
-use pocketmine\command\ConsoleCommandSender;
+use pocketmine\console\ConsoleCommandSender;
+use pocketmine\lang\Language;
 
 class CommandsExploder extends PluginBase implements Listener {
 	
-    public function onEnable() {
+    public function onEnable(): void{
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 	}
 	
-	public function onExecuteCommand(CommandEvent $ev){
+	public function onExecuteCommand(CommandEvent $ev): bool{
 		$command = $ev->getCommand();
 		$exp = explode(" && ", $command);
 		$sender = $ev->getSender();
@@ -29,7 +31,7 @@ class CommandsExploder extends PluginBase implements Listener {
 			$ev->setCommand($exp[0]);
 			unset($exp[0]);
 			foreach($exp as $cmd){
-				$this->getServer()->getCommandMap()->dispatch(new ConsoleCommandSender(), $cmd);
+				$this->getServer()->getCommandMap()->dispatch(new ConsoleCommandSender($this->getServer(), new Language("eng")), $cmd);
 			}
 			return true;
 		}
