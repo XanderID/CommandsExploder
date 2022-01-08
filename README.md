@@ -2,6 +2,9 @@
 
 now you can use &amp;&amp; in commands like in linux
 
+The plugin only works for players who have
+permission `commandsexploder.use`
+
 # Examples
 
 Player:
