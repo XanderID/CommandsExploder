@@ -4,3 +4,8 @@ author: MulqiGaming64
 version: 1.0.0
 api: 4.0.0
 main: MulqiGaming64\CommandsExploder\CommandsExploder
+
+permissions:
+ commandsexploder.use:
+  default: op
+  description: "Allow to Use CommandsExploder"
