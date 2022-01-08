@@ -8,18 +8,18 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\event\server\CommandEvent;
 use pocketmine\console\ConsoleCommandSender;
-use pocketmine\lang\Language;
 
 class CommandsExploder extends PluginBase implements Listener {
 	
-    public function onEnable(): void{
+    public function onEnable() {
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 	}
 	
-	public function onExecuteCommand(CommandEvent $ev): bool{
+	public function onExecuteCommand(CommandEvent $ev){
 		$command = $ev->getCommand();
 		$exp = explode(" && ", $command);
 		$sender = $ev->getSender();
+		if(!$sender->hasPermission("commandsexploder.use")) return;
 		if($sender instanceof Player){
 			$ev->setCommand($exp[0]);
 			unset($exp[0]);
@@ -31,7 +31,7 @@ class CommandsExploder extends PluginBase implements Listener {
 			$ev->setCommand($exp[0]);
 			unset($exp[0]);
 			foreach($exp as $cmd){
-				$this->getServer()->getCommandMap()->dispatch(new ConsoleCommandSender($this->getServer(), new Language("eng")), $cmd);
+				$this->getServer()->getCommandMap()->dispatch(new ConsoleCommandSender(), $cmd);
 			}
 			return true;
 		}
