@@ -15,4 +15,4 @@ say Hi!! &amp;&amp; me Hi everyone
 
 # Additional Notes
 
-- If you find bugs or want to give suggestions, please visit [here](https://github.com/MulqiGaming64/CommandsExploder/issues)
+- If you find bugs or want to give suggestions, please visit [here](https://github.com/XanderID/CommandsExploder/issues)

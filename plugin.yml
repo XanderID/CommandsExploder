@@ -1,9 +1,9 @@
 name: CommandsExploder
 description: "Now You can use && in Commands"
-author: MulqiGaming64
+author: XanderID
 version: 1.0.2
 api: 4.0.0
-main: MulqiGaming64\CommandsExploder\CommandsExploder
+main: XanderID\CommandsExploder\CommandsExploder
 
 permissions:
  commandsexploder.use:

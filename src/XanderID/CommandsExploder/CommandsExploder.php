@@ -1,6 +1,6 @@
 <?php
 
-namespace MulqiGaming64\CommandsExploder;
+namespace XanderID\CommandsExploder;
 
 use pocketmine\player\Player;
 use pocketmine\plugin\PluginBase;
